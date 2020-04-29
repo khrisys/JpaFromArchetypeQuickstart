@@ -1,0 +1,41 @@
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    
+    <!-- Define persistence unit -->
+    
+    <persistence-unit name="PRODUITS_PERSISTENCE_UNIT">
+        <description>My Persistence Unit</description>
+        <!--    Description du provider : ici, Hibernate-->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        
+        <!-- <mapping-file>META-INF/mappingFile.xml</mapping-file>
+                    <jar-file>packedEntity.jar</jar-file>
+                    <class>sample.MyEntity1</class>
+                    <class>sample.MyEntity2</class>-->
+        <properties>
+            <!--<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> &lt;!&ndash; DB Driver &ndash;&gt;
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/db_ticket" /> &lt;!&ndash; BD Mane &ndash;&gt;
+            <property name="javax.persistence.jdbc.user" value="postgres" /> &lt;!&ndash; DB User &ndash;&gt;
+            <property name="javax.persistence.jdbc.password" value="postgres" /> &lt;!&ndash; DB Password &ndash;&gt;-->
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" /> <!-- DB Driver -->
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/jpa_produits" /> <!-- BD Mane -->
+            <property name="hibernate.connection.user" value="postgres" /> <!-- DB User -->
+            <property name="hibernate.connection.password" value="postgres" /> <!-- DB Password -->
+     
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/> <!-- DB Dialect -->
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update (verifie si la bdd
+            existe  : avec update, si la table n'existe pas , il la créé, sinon, il touche pas la bdd) -->
+    
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console : affiche les requetes sql au moment
+            de l'execution -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted  -->
+            
+            <!-- <property name="javax.persistence.jdbc.url"
+                       value="objectdb://localhost/my.odb"/>
+             <property name="javax.persistence.jdbc.user" value="admin"/>
+             <property name="javax.persistence.jdbc.password" value="admin"/>-->
+        </properties>
+    </persistence-unit>
+
+</persistence>

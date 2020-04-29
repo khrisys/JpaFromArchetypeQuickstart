@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="jpa_produits" uuid="d648d757-ceb2-4013-bd0e-bff2bb1a32d1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/jpa_produits</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="PRODUITS_PERSISTENCE_UNIT/Hibernate" uuid="87f9c5ec-0df2-45c6-b15d-c9e3b4e8635b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+E:/WORKSPACES/workspace_intelliJ/JpaFromArchetypeQuickstart/src/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/jpa_produits</jdbc-url>
+    </data-source>
+  </component>
+</project>
